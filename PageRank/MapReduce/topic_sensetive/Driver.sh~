@@ -1,0 +1,13 @@
+#!/bin/bash
+#yarn jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.5.1.jar -mapper /home/sonuk7/Documents/PageRank/PR_Python/Mapper.py -reducer /home/sonuk7/Documents/PageRank/PR_Python/Reducer.py -input ./rank0 -output rank1
+
+name=topic_rank
+COUNTER=0
+while [ $COUNTER -lt 25 ]
+do
+val1=$name$COUNTER
+let COUNTER=COUNTER+1
+val2=$name$COUNTER
+yarn jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.5.1.jar -mapper /home/sonuk7/Documents/PageRank/PR_Python/Mapper.py -reducer /home/sonuk7/Documents/PageRank/PR_Python/Reducer.py -input ./$val1 -output $val2
+done
+

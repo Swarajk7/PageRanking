@@ -1,0 +1,1000 @@
+  846  hadoop dfs -cat sumans1.txt
+  847  hadoop dfs -ls sumans1.txt
+  848  hadoop dfs -cat sumans1.txt/part-00000
+  849  cat Reducer.py
+  850  gedit Reducer.py
+  851  cat > input.txt 
+  852  cat input.txt 
+  853  cat input.txt | python Mapper.py 
+  854  gedit Mapper.py
+  855  cat input.txt | python Mapper.py 
+  856  cat input.txt | python Mapper.py | python Reducer.py 
+  857  gedit Reducer.py
+  858  hadoop dfs -copyFromLocal input.txt .
+  859  hadoop dfs -rm input.txt 
+  860  hadoop dfs -copyFromLocal input.txt .
+  861  hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.5.1.jar -mapper /home/sonuk7/Documents/FindSum/Mapper.py -reducer /home/sonuk7/Documents/FindSum/Reducer.py -input ./input.txt -output sumans2.txt
+  862  hadoop dfs -cat sumans2.txt/part-00000
+  863  gedit Reducer.py
+  864  cat Reducer.py
+  865  hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.5.1.jar -mapper /home/sonuk7/Documents/FindSum/Mapper.py -reducer /home/sonuk7/Documents/FindSum/Reducer.py -input ./input.txt -output sumans3
+  866  exit
+  867  ls
+  868  cd Documents/
+  869  ls
+  870  cd FindSum/
+  871  ls
+  872  cat Mapper.py
+  873  cat Reducer.py
+  874  clear
+  875  ls
+  876  gedit input.txt
+  877  cat input.txt|./Mapper.py|./Reducer.py
+  878  cat input.txt
+  879  cat input.txt|./Mapper.py
+  880  cat input.txt|./Mapper.py|./Reducer.py
+  881  cat Mapper.py
+  882  cat Reducer.py
+  883  cat input.txt
+  884  start-all.sh
+  885  jps
+  886  yarn jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.5.1.jar -mapper /home/sonuk7/Documents/FindSum/Mapper.py -reducer /home/sonuk7/Documents/FindSum/Reducer.py -input ./input.txt -output sumans123.txt
+  887  hadoop dfs -ls
+  888  hadoop dfs -cat sumans123.txt
+  889  hadoop dfs -ls sumans123.txt
+  890  hadoop dfs -ls sumans123.txt/part-00000
+  891  hadoop dfs -cat sumans123.txt/part-00000
+  892  ls
+  893  hadoop dfs -copyFromLocal inp.txt .
+  894  hadoop dfs -ls
+  895  yarn jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.5.1.jar -mapper /home/sonuk7/Documents/FindSum/mean_map.py -reducer /home/sonuk7/Documents/FindSum/mean_red.py -input ./inp.txt -output sumanshottie
+  896  ls -l
+  897  chmod +x mean_*.py
+  898  ls -l
+  899  chmod +w mean_*.py
+  900  yarn jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.5.1.jar -mapper /home/sonuk7/Documents/FindSum/mean_map.py -reducer /home/sonuk7/Documents/FindSum/mean_red.py -input ./inp.txt -output sumanshottie1
+  901  cat mean_red.py 
+  902  gedit mean_red.py 
+  903  cat inp.txt | python mean_red.py 
+  904  cat inp.txt 
+  905  cat inp.txt | python mean_red.py 
+  906  yarn jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.5.1.jar -mapper /home/sonuk7/Documents/FindSum/mean_map.py -reducer /home/sonuk7/Documents/FindSum/mean_red.py -input ./inp.txt -output sumanshottie2
+  907  cd Documents/
+  908  dir
+  909  cd PageRank/
+  910  mv SearchMapper.java RankMapper.java
+  911  dir
+  912  gedit RankMapper.java 
+  913  mv SearchReducer.java RankReducer.java
+  914  gedit RankReducer.java 
+  915  mv ShortestPath.java Ranker.java
+  916  gedit Ranker.java 
+  917  clear
+  918  ls
+  919  ls *.java
+  920  history
+  921  history | grep "javac" 
+  922  cd ..
+  923  cd ShortestPath/
+  924  ls
+  925  cat makeandrun.sh
+  926  cp makeandrun.sh ../PageRank/
+  927  clear
+  928  ls
+  929  cd ..
+  930  cd PageRank/
+  931  clear
+  932  ls
+  933  gedit makeandrun.sh 
+  934  start-all.sh 
+  935  ./makeandrun.sh
+  936  head -1 makeandrun.sh
+  937  head -2 makeandrun.sh
+  938  javac -classpath `hadoop classpath` *.java
+  939  head -2 makeandrun.sh
+  940  javac -classpath `hadoop classpath` *.java
+  941  javap java.lang.String
+  942  javap java.lang.String | grep "split"
+  943  javac -classpath `hadoop classpath` *.java
+  944  ./makeandrun.sh
+  945  hadoop dfs -ls
+  946  hadoop dfs -ls ./rankvalue20
+  947  hadoop dfs -cat rankvalue20/part-r-00000
+  948  hadoop dfs -cat rankvalue1/part-r-00000
+  949  ./makeandrun.sh
+  950  hadoop dfs -ls
+  951  hadoop dfs -cat rankvalue1/part-r-00000
+  952  cd $HADOOP_HDFS_HOME
+  953  ls
+  954  cd logs/
+  955  dir
+  956  ls -l
+  957  clear
+  958  ls -l
+  959  cd userlogs/
+  960  ls
+  961  ls -l
+  962  cd application_1415632787937_0022
+  963  ls
+  964  cd container_1415632787937_0022_01_00000
+  965  cat container_1415632787937_0022_01_00000
+  966  ls -l
+  967  cd container_1415632787937_0022_01_00000
+  968  cd container_1415632787937_0022_01_000001
+  969  ls
+  970  cat stderr 
+  971  cat stdout 
+  972  cat syslog 
+  973  cd ~
+  974  cd Documents/
+  975  clear
+  976  cd PageRank/
+  977  dir
+  978  hadoop dfs -cat rankvalue1/part-r-00000
+  979  ./makeandrun.sh
+  980  hadoop dfs -cat rankvalue1/part-r-00000
+  981  ls
+  982  cat pageinput.txt 
+  983  hadoop dfs -ls
+  984  cat makeandrun.sh
+  985  ./makeandrun.sh
+  986  cat pageinput.txt 
+  987  gedit pageinput.txt 
+  988  ./makeandrun.sh
+  989  hadoop dfs -cat rankvalue1/part-r-00000
+  990  javac DemoTest.java 
+  991  java DemoTest 
+  992  javac DemoTest.java 
+  993  java DemoTest 
+  994  javac DemoTest.java 
+  995  java DemoTest 
+  996  javac DemoTest.java 
+  997  java DemoTest
+  998  javac DemoTest.java 
+  999  java DemoTest 
+ 1000  javac DemoTest.java 
+ 1001  java DemoTest 
+ 1002  javap java.lang.Array
+ 1003  javap java.lang.Arrays
+ 1004  cd PageRank/
+ 1005  ./makeandrun.sh
+ 1006  hadoop dfs -cat rankvalue1/part-r-00000
+ 1007  ./makeandrun.sh
+ 1008  hadoop dfs -ls
+ 1009  clear
+ 1010  ./makeandrun.sh
+ 1011  hadoop dfs -cat rankvalue1/part-r-00000
+ 1012  cd ..
+ 1013  javac DemoTest.java 
+ 1014  java DemoTest 
+ 1015  javac DemoTest.java 
+ 1016  java DemoTest 
+ 1017  javac DemoTest.java 
+ 1018  java DemoTest 
+ 1019  javac DemoTest.java 
+ 1020  java DemoTest 
+ 1021  cd PageRank/
+ 1022  clear
+ 1023  ls
+ 1024  ./makeandrun.sh
+ 1025  hadoop dfs -cat rankvalue1/part-r-00000
+ 1026  ./makeandrun.sh
+ 1027  hadoop dfs -cat rankvalue4/part-r-00000
+ 1028  hadoop dfs -cat rankvalue8/part-r-00000
+ 1029  clear
+ 1030  hadoop dfs -cat rankvalue2/part-r-00000
+ 1031  ./makeandrun.sh
+ 1032  hadoop dfs -cat rankvalue1/part-r-00000
+ 1033  ./makeandrun.sh
+ 1034  cd ..
+ 1035  javac DemoTest.java 
+ 1036  java DemoTest 
+ 1037  javac DemoTest.java 
+ 1038  java DemoTest
+ 1039  javac DemoTest.java 
+ 1040  java DemoTest 
+ 1041  javac DemoTest.java 
+ 1042  java DemoTest 
+ 1043  cd PageRank/
+ 1044  clear
+ 1045  ls
+ 1046  hadoop dfs -cat rankvalue1/part-r-00000
+ 1047  ./makeandrun.sh
+ 1048  hadoop dfs -cat rankvalue1/part-r-00000
+ 1049  ./makeandrun.sh
+ 1050  hadoop dfs -cat rankvalue1/part-r-00000
+ 1051  cd ..
+ 1052  javac DemoTest.java 
+ 1053  java DemoTest 
+ 1054  javac DemoTest.java 
+ 1055  java DemoTest 
+ 1056  javac DemoTest.java 
+ 1057  java DemoTest 
+ 1058  javac DemoTest.java 
+ 1059  cd PageRank/
+ 1060  python change.py 
+ 1061  python change.py > pageinput1.txt
+ 1062  ./makeandrun.sh
+ 1063  hadoop dfs -cat rankvalue1/part-r-00000
+ 1064  cd ..
+ 1065  ls
+ 1066  cd ShortestPath/
+ 1067  ls
+ 1068  cat graphinput.txt 
+ 1069  gedit graphinput.txt 
+ 1070  ls
+ 1071  cd ..
+ 1072  cd PageRank/
+ 1073  cat pageinput1.txt 
+ 1074  ./makeandrun.sh
+ 1075  ./makeandrun.sh
+ 1076  hadoop dfs -cat rankvalue1/part-r-00000
+ 1077  ./makeandrun.sh
+ 1078  hadoop dfs -cat rankvalue1/part-r-00000
+ 1079  ./makeandrun.sh
+ 1080  hadoop dfs -cat rankvalue1/part-r-00000
+ 1081  ./makeandrun.sh
+ 1082  hadoop dfs -cat rankvalue1/part-r-00000
+ 1083  hadoop dfs -cat rankvalue2/part-r-00000
+ 1084  ./makeandrun.sh
+ 1085  hadoop dfs -ls
+ 1086  hadoop dfs -cat pageinput.txt
+ 1087  cd $HADOOP_HDFS_HOME
+ 1088  cd logs/userlogs/
+ 1089  ls
+ 1090  cat application_1415632787937_0058/container_1415632787937_0058_01_000001/stdout 
+ 1091  cat application_1415632787937_0058/container_1415632787937_0058_01_000002/stdout 
+ 1092  cat application_1415632787937_0058/container_1415632787937_0058_01_000003/stdout 
+ 1093  cd ~
+ 1094  cd Documents/
+ 1095  cd PageRank/
+ 1096  clear
+ 1097  ls
+ 1098  cat makeandrun.sh
+ 1099  ./makeandrun.sh
+ 1100  clear
+ 1101  ./makeandrun.sh
+ 1102  dir
+ 1103  hadoop dfs -cat rankvalue2/part-r-00000
+ 1104  hadoop dfs -cat rankvalue20/part-r-00000
+ 1105  hadoop dfs -cat rankvalue15/part-r-00000
+ 1106  hadoop dfs -cat rankvalue3/part-r-00000
+ 1107  hadoop dfs -cat rankvalue4/part-r-00000
+ 1108  hadoop dfs -cat rankvalue1/part-r-00000
+ 1109  ./makeandrun.sh
+ 1110  ls
+ 1111  hadoop dfs -cat rankvalue10/part-r-00000
+ 1112  exit
+ 1113  cd $HADOOP_HDFS_HOME
+ 1114  cd logs/
+ 1115  cd userlogs/
+ 1116  ls
+ 1117  ls -l
+ 1118  cd application_1415632787937_0023
+ 1119  ls
+ 1120  cd container_1415632787937_0023_01_00001
+ 1121  cd container_1415632787937_0023_01_000001
+ 1122  ls
+ 1123  cat stdout 
+ 1124  cd ..
+ 1125  ls
+ 1126  cat container_1415632787937_0023_01_000002/stdout 
+ 1127  cat container_1415632787937_0023_01_000003/stdout 
+ 1128  cd ..
+ 1129  cd application_1415632787937_0024/
+ 1130  cat container_1415632787937_0023_01_000003/stdout 
+ 1131  ls
+ 1132  cat container_1415632787937_0024_01_000003/stdout 
+ 1133  cat container_1415632787937_0024_01_000002/stdout 
+ 1134  cd ..
+ 1135  cd application_1415632787937_0025/
+ 1136  cat container_1415632787937_0025_01_000002/stdout 
+ 1137  cd ..
+ 1138  cd application_1415632787937_0026
+ 1139  ls
+ 1140  cat container_1415632787937_0026_01_000002/stdout 
+ 1141  cdcd ..
+ 1142  cd ..
+ 1143  ls -;
+ 1144  ls -l
+ 1145  cd application_1415632787937_0040
+ 1146  ls
+ 1147  cat container_1415632787937_0040_01_000003/stdout 
+ 1148  cat container_1415632787937_0040_01_000002/stdout 
+ 1149  cat container_1415632787937_0040_01_000001/stdout 
+ 1150  cat container_1415632787937_0040_01_000003/stdout 
+ 1151  cd ..
+ 1152  ls -l
+ 1153  cd application_1415632787937_0036
+ 1154  ls
+ 1155  cat container_1415632787937_0036_01_000002/stdout 
+ 1156  cat container_1415632787937_0036_01_000003/stdout 
+ 1157  cd ..
+ 1158  ls -l
+ 1159  cd application_1415632787937_0041
+ 1160  cat container_1415632787937_0041_01_000003/stdout 
+ 1161  cd ../application_1415632787937_0042
+ 1162  cat container_1415632787937_0042_01_000003/stdout 
+ 1163  cat container_1415632787937_0042_01_000002/stdout 
+ 1164  cat container_1415632787937_0042_01_000001/stdout 
+ 1165  cd ..
+ 1166  rm application_*
+ 1167  rm -rf ap*
+ 1168  ls
+ 1169  cat application_1415632787937_0043/container_1415632787937_0043_01_000003/stdout
+ 1170  cat application_1415632787937_0044/container_1415632787937_0043_01_000003/stdout
+ 1171  ls
+ 1172  cd application_1415632787937_0044/container_1415632787937_0044_01_000003/stdout
+ 1173  cat application_1415632787937_0044/container_1415632787937_0044_01_000003/stdout
+ 1174  cd ~
+ 1175  cd Documents/
+ 1176  javac DemoTest.java 
+ 1177  java DemoTest 
+ 1178  javac DemoTest.java 
+ 1179  java DemoTest 
+ 1180  cd $HADOOP_HDFS_HOME
+ 1181  cd logs/userlogs/
+ 1182  ls
+ 1183  cat application_1415632787937_0059/container_1415632787937_0059_01_000002/stdout 
+ 1184  cat application_1415632787937_0060/container_1415632787937_0060_01_000001/stdout 
+ 1185  cat application_1415632787937_0060/container_1415632787937_0060_01_000002/stdout 
+ 1186  cat application_1415632787937_0060/container_1415632787937_0060_01_000003/stdout 
+ 1187  ls
+ 1188  ls -l
+ 1189  cat application_1415632787937_0061/container_1415632787937_0061_01_000003/stdout 
+ 1190  cat application_1415632787937_0061/container_1415632787937_0061_01_000002/stdout 
+ 1191  hadoop dfs -cat pageinput.txt
+ 1192  cat application_1415632787937_0062/container_1415632787937_0062_01_000003/stdout 
+ 1193  ls
+ 1194  history
+ 1195  clear
+ 1196  history
+ 1197  clear
+ 1198  cat application_1415632787937_0062/container_1415632787937_0062_01_000003/stdout 
+ 1199  ls -l
+ 1200  cat application_1415632787937_0060/container_1415632787937_0060_01_000003/stdout 
+ 1201  cat application_1415632787937_0060/container_1415632787937_0060_01_000004/stdout 
+ 1202  cat application_1415632787937_0060/container_1415632787937_0060_01_000002/stdout 
+ 1203  cat application_1415632787937_0060/container_1415632787937_0060_01_000003/stdout 
+ 1204  cd application_1415632787937_0060
+ 1205  ls
+ 1206  cat container_1415632787937_0060_01_000005/stdout 
+ 1207  cat container_1415632787937_0060_01_000001/stdout 
+ 1208  cat container_1415632787937_0060_01_000002/stdout 
+ 1209  cat container_1415632787937_0060_01_000003/stdout 
+ 1210  cat container_1415632787937_0060_01_000004/stdout 
+ 1211  cat container_1415632787937_0060_01_000005/stdout 
+ 1212  cd ..
+ 1213  cd application_1415632787937_0061/
+ 1214  cat container_1415632787937_0061_01_000002/stdout
+ 1215  ls
+ 1216  hadoop dfs -ls
+ 1217  hadoop dfs -cat rankvalue1/r-00000
+ 1218  hadoop dfs -ls rankvalue1
+ 1219  hadoop dfs -ls rankvalue1/part-r-00000
+ 1220  hadoop dfs -cat rankvalue1/part-r-00000
+ 1221  cd ..
+ 1222  ls
+ 1223  ls -l
+ 1224  cat application_1415632787937_0065/container_1415632787937_0065_01_000003/stdout
+ 1225  cat application_1415632787937_0063/container_1415632787937_0063_01_000003/stdout
+ 1226  hadoop dfs -cat pageinput.txt
+ 1227  cat application_1415632787937_0063/container_1415632787937_0063_01_000002/stdout
+ 1228  cat application_1415632787937_0062/container_1415632787937_0062_01_000002/stdout
+ 1229  cat application_1415632787937_0062/container_1415632787937_0062_01_000003/stdout
+ 1230  cat application_1415632787937_0063/container_1415632787937_0063_01_000002/stdout 
+ 1231  hadoop dfs -cat pageinput.txt
+ 1232  cat application_1415632787937_0063/container_1415632787937_0063_01_000003/stdout 
+ 1233  hadoop dfs -cat rankvalue1/part-r-00000
+ 1234  ls
+ 1235  ls -l
+ 1236  cat application_1415632787937_0086/container_1415632787937_0086_01_000002/stdout
+ 1237  cat application_1415632787937_0086/container_1415632787937_0086_01_000003/stdout 
+ 1238  cat application_1415632787937_0087/container_1415632787937_0087_01_000002/stdout
+ 1239  cat application_1415632787937_0088/container_1415632787937_0088_01_000002/stdout 
+ 1240  stop-all.sh 
+ 1241  jps
+ 1242  exit
+ 1243  sudo apt-get install python-numpy python-matplotlib
+ 1244  ls
+ 1245  cd Documents/
+ 1246  ls
+ 1247  cd Testing
+ 1248  mkdir Testing
+ 1249  mv DemoTest.java Testing/
+ 1250  cd Testing/
+ 1251  ls
+ 1252  gedit DemoPlot.py
+ 1253  python DemoPlot.py 
+ 1254  cd ..
+ 1255  cd PageRank/
+ 1256  ls
+ 1257  gedit Iterative.py
+ 1258  cat pageinput.txt
+ 1259  python Iterative.py 
+ 1260  bc
+ 1261  python
+ 1262  python Iterative.py 
+ 1263  ./makeandrun.sh
+ 1264  ls
+ 1265  start-all.sh 
+ 1266  ./makeandrun.sh
+ 1267  hadoop dfs -ls
+ 1268  hadoop dfs -cat rankvalue1/part-r-00000
+ 1269  hadoop dfs -cat rankvalue2/part-r-00000
+ 1270  ./makeandrun.sh
+ 1271  hadoop dfs -cat rankvalue10/part-r-00000
+ 1272  ls
+ 1273  cat change.py
+ 1274  ls
+ 1275  python Chnage_graph_format.py
+ 1276  ls
+ 1277  python Chnage_graph_format.py
+ 1278  ls
+ 1279  gedit modified_page_data.txt 
+ 1280  python Chnage_graph_format.py
+ 1281  gedit modified_page_data.txt 
+ 1282  python Iterative.py 
+ 1283  python Chnage_graph_format.py
+ 1284  python Iterative.py 
+ 1285  ./makeandrun.sh
+ 1286  stop-all.sh 
+ 1287  start-all.
+ 1288  start-all.sh 
+ 1289  jps
+ 1290  cd Documents/PageRank/
+ 1291  ./makeandrun.sh
+ 1292  cd ..
+ 1293  cd Testing/
+ 1294  gedit DemoTest.java 
+ 1295  javac DemoTest.java 
+ 1296  java DemoTest 
+ 1297  javac DemoTest.java 
+ 1298  java DemoTest 
+ 1299  javac DemoTest.java 
+ 1300  java DemoTest 
+ 1301  cd ..
+ 1302  cd PageRank/
+ 1303  ./makeandrun.sh
+ 1304  cd ..
+ 1305  cd Testing/
+ 1306  javac DemoTest.java 
+ 1307  java DemoTest 
+ 1308  cd ../PageRank/
+ 1309  ls
+ 1310  ./makeandrun.sh
+ 1311  python Iterative.py 
+ 1312  ./makeandrun.sh
+ 1313  hadoop dfs -ls
+ 1314  hadoop dfs -cat rankvalue10/part-r-00000
+ 1315  cat makeandrun.sh
+ 1316  hadoop jar Ranker.jar Ranker
+ 1317  ./makeandrun.sh
+ 1318  hadoop dfs -cat rankvalue20/part-r-00000
+ 1319  ./makeandrun.sh
+ 1320  hadoop dfs -cat rankvalue20/part-r-00000
+ 1321  python Iterative.py 
+ 1322  hadoop dfs -cat rankvalue10/part-r-00000
+ 1323  python Iterative.py 
+ 1324  hadoop dfs -cat rankvalue10/part-r-00000
+ 1325  python Iterative.py
+ 1326  hadoop dfs -cat rankvalue11/part-r-00000
+ 1327  hadoop dfs -cat rankvalue1/part-r-00000
+ 1328  python Iterative.py
+ 1329  ./makeandrun.sh
+ 1330  hadoop dfs -cat rankvalue1/part-r-00000
+ 1331  python Iterative.py 
+ 1332  ./makeandrun.sh
+ 1333  hadoop dfs -cat rankvalue1/part-r-00000
+ 1334  python Iterative.py 
+ 1335  ./makeandrun.sh
+ 1336  hadoop dfs -cat rankvalue1/part-r-00000
+ 1337  ./makeandrun.sh
+ 1338  hadoop dfs -cat rankvalue1/part-r-00000
+ 1339  ./makeandrun.sh
+ 1340  ls
+ 1341  cat makeandrun.sh
+ 1342  ./makeandrun.sh
+ 1343  hadoop dfs -cat rankvalue1/part-r-00000
+ 1344  ./makeandrun.sh
+ 1345  python Iterative.py 
+ 1346  cat Iterative.py
+ 1347  cat pageinput.txt
+ 1348  python Iterative.py 
+ 1349  clear
+ 1350  python Iterative.py 
+ 1351  cd $HADOOP_HDFS_HOME
+ 1352  cd logs/userlogs/
+ 1353  ls
+ 1354  ls -l
+ 1355  cd application_1415736414688_0001/container_1415736414688_0001_01_000002/
+ 1356  ls
+ 1357  cat stdout 
+ 1358  cd ../..
+ 1359  cat application_1415736414688_0002/container_1415736414688_0002_01_000002/stdout 
+ 1360  cd ..
+ 1361  cd userlogs/
+ 1362  cat application_1415736414688_0003/container_1415736414688_0003_01_000002/stdout 
+ 1363  cat application_1415736414688_0004/container_1415736414688_0004_01_000002/stdout 
+ 1364  ./application_1415
+ 1365  cat application_1415736414688_0005/container_1415736414688_0005_01_000002/stdout 
+ 1366  cat application_1415736414688_0005/container_1415736414688_0005_01_000003/stdout 
+ 1367  cat application_1415736414688_0005/container_1415736414688_0005_01_000004/stdout 
+ 1368  cat application_1415736414688_0005/container_1415736414688_0005_01_000005/stdout 
+ 1369  cat application_1415736414688_0005/container_1415736414688_0005_01_000006/stdout 
+ 1370  cat application_1415736414688_0006/container_1415736414688_0006_01_000002/stdout 
+ 1371  ls
+ 1372  cat application_1415736414688_0007/container_1415736414688_0007_01_000002/stdout
+ 1373  cat application_1415736414688_0007/container_1415736414688_0007_01_000002/stderr 
+ 1374  ls application_1415736414688_0007/container_1415736414688_0007_01_000002/ 
+ 1375  ls application_1415736414688_0007/container_1415736414688_0007_01_000002/syslog
+ 1376  cat application_1415736414688_0007/container_1415736414688_0007_01_000002/syslog
+ 1377  ls
+ 1378  cd application_1415736414688_0069/container_1415736
+ 1379  ls application_1415736414688_0069/container_1415736414688_0069_01_000003/
+ 1380  cat application_1415736414688_0069/container_1415736414688_0069_01_000003/stdout
+ 1381  cd application_1415736414688_0069/
+ 1382  ls
+ 1383  cat application_1415736414688_0069/container_1415736414688_0069_01_000003/stdout
+ 1384  cat  container_1415736414688_0069_01_000003/stdout 
+ 1385  cd ..
+ 1386  cd application_1415736414688_0070/
+ 1387  cat container_1415736414688_0070_01_000003/stdout 
+ 1388  gedit container_1415736414688_0070_01_000003/stdout 
+ 1389  cat application_1415736414688_0005/container_1415736414688_0005_01_000003/stdout 
+ 1390  cd ..
+ 1391  cd application_1415736414688_0071/
+ 1392  cat container_1415736414688_0071_01_000003/stdout
+ 1393  cat container_1415736414688_0071_01_000002/stdout
+ 1394  cat container_1415736414688_0071_01_000001/stdout
+ 1395  cat container_1415736414688_0071_01_000002/stdout
+ 1396  cat container_1415736414688_0071_01_000003/stdout
+ 1397  cd ..
+ 1398  cat application_1415736414688_0072/
+ 1399  cd application_1415736414688_0072/
+ 1400  cat container_1415736414688_0072_01_000003/stdout 
+ 1401  cd ..
+ 1402  cd application_1415736414688_0073/
+ 1403  cat container_1415736414688_0073_01_000003/stdout
+ 1404  cd ..
+ 1405  cd application_1415736414688_0074/
+ 1406  cat container_1415736414688_0074_01_000003/stdout 
+ 1407  cd ..
+ 1408  ls
+ 1409  mv -rf *
+ 1410  mv -f *
+ 1411  ls
+ 1412  rm -rf *
+ 1413  ls
+ 1414  car application_1415736414688_0075/container_1415736414688_0075_01_000003/stdout
+ 1415  cat application_1415736414688_0075/container_1415736414688_0075_01_000003/stdout
+ 1416  gedit application_1415736414688_0075/container_1415736414688_0075_01_000003/stdout
+ 1417  ./application_1415736414688_0075/cd ..
+ 1418  cat application_1415736414688_0076/container_1415736414688_0076_01_000003/stdout 
+ 1419  cd ~
+ 1420  cd Documents/PageRank/
+ 1421  python Iterative.py 
+ 1422  cat pageinput
+ 1423  cat pageinput.txt
+ 1424  python Iterative.py 
+ 1425  hadoop dfs -cat rankvalue1/part-r-000000
+ 1426  hadoop dfs -ls
+ 1427  hadoop dfs -ls rankvalue1
+ 1428  hadoop dfs -cat rankvalue1/part-r-00000
+ 1429  python Iterative.py 
+ 1430  hadoop dfs -cat rankvalue1/part-r-00000
+ 1431  python Iterative.py 
+ 1432  ./makeandrun.sh
+ 1433  hadoop dfs -cat rankvalue1/part-r-00000
+ 1434  python Iterative.py 
+ 1435  python Iterative.py > outputRank.txt
+ 1436  cd ..
+ 1437  cd Testing/
+ 1438  python DemoPlot.py 
+ 1439  stop-all.sh 
+ 1440  exit
+ 1441  ls
+ 1442  cd Documents/PageRank/
+ 1443  ls
+ 1444  ls *.py
+ 1445  cd ..
+ 1446  cd Testing/
+ 1447  gedit DemoPlot.py
+ 1448  python DemoPlot.py 
+ 1449  gedit DemoPlot.py
+ 1450  python DemoPlot.py 
+ 1451  gedit DemoPlot.py
+ 1452  python DemoPlot.py 
+ 1453  gedit DemoPlot.py
+ 1454  python DemoPlot.py 
+ 1455  gedit DemoPlot.py
+ 1456  python DemoPlot.py 
+ 1457  gedit DemoPlot.py
+ 1458  python DemoPlot.py 
+ 1459  cd Documents/Testing/
+ 1460  python sumit_plot.py 
+ 1461  gedit simplefork.c
+ 1462  gcc simplefork.c 
+ 1463  ./a.out 
+ 1464  gcc simplefork.c 
+ 1465  ./a.out 
+ 1466  gcc simplefork.c 
+ 1467  ./a.out 
+ 1468  gcc simplefork.c 
+ 1469  ./a.out 
+ 1470  gcc simplefork.c 
+ 1471  ./a.out 
+ 1472  gcc simplefork.c 
+ 1473  ./a.out 
+ 1474  gcc simplefork.c 
+ 1475  ./a.out 
+ 1476  gcc simplefork.c 
+ 1477  ./a.out 
+ 1478  gcc simplefork.c 
+ 1479  ./a.out 
+ 1480  gcc simplefork.c
+ 1481  ./a.out 
+ 1482  dir
+ 1483  python Iterative.py 
+ 1484  cat pageinput.txt
+ 1485  cat pageinput1.txt
+ 1486  clear
+ 1487  ls -l
+ 1488  cat modified_page_data.txt
+ 1489  ls -l
+ 1490  cat pageinput_tsr.txt
+ 1491  python Iterative.py 
+ 1492  python Iterative_Topic_Sensetive.py 
+ 1493  clear
+ 1494  ls
+ 1495  gedit &
+ 1496  gedit pageinput1.txt
+ 1497  cat pagedata.txt
+ 1498  gedit pagedata.txt
+ 1499  gedit Iterative.py
+ 1500  python Iterative_Topic_Sensetive.py 
+ 1501  python Iterative.py 
+ 1502  python 
+ 1503  python
+ 1504  gedit pageinput_tsr.txt
+ 1505  gedit Iterative_Topic_Sensetive.py
+ 1506  python Iterative_Topic_Sensetive.py 
+ 1507  echo 'deb http://archive.scrapy.org/ubuntu scrapy main' | sudo tee /etc/apt/sources.list.d/scrapy.list
+ 1508  sudo apt-get update && sudo apt-get install scrapy-0.24
+ 1509  scrapy
+ 1510  scrapy shell www.google.com
+ 1511  scrapy shell htpps://www.google.com
+ 1512  scrapy shell https://www.google.co.in/
+ 1513  clear
+ 1514  ls
+ 1515  cd Documents/
+ 1516  scrapy startproject crawler
+ 1517  cd crawler/
+ 1518  ls
+ 1519  ls -R
+ 1520  ls
+ 1521  cd crawler/
+ 1522  gedit&
+ 1523  gedit items.py 
+ 1524  cd ..
+ 1525  cd crawler/
+ 1526  ls
+ 1527  scrapy crawl dmoz
+ 1528  scrapy shell "http://www.dmoz.org/Computers/Programming/Languages/Python/Books/"
+ 1529  ls
+ 1530  ls -l
+ 1531  cat Resources 
+ 1532  scrapy crawl dmoz
+ 1533  scrapy crawl dmoz -o items.json
+ 1534  cd ..
+ 1535  ls
+ 1536  rmdir crawler/
+ 1537  rmdir -f crawler/
+ 1538  rmdir -rf crawler/
+ 1539  rmdir -i crawler/
+ 1540  rmdir crawler/
+ 1541  rm -rf crawler/
+ 1542  ls
+ 1543  scrapy startproject dmozsite
+ 1544  cd dmozsite/
+ 1545  gedit &
+ 1546  ls
+ 1547  cd dmozsite/
+ 1548  ls
+ 1549  gedut items.py 
+ 1550  gedit items.py 
+ 1551  cd spiders/
+ 1552  ls
+ 1553  gedit dmoz_spider.py
+ 1554  cd ..
+ 1555  ls
+ 1556  cd ..
+ 1557  ls
+ 1558  scrapy crawl dmoz -o items.json
+ 1559  ls
+ 1560  cd dmozsite/
+ 1561  ls
+ 1562  cd spiders/
+ 1563  ls
+ 1564  gedit dmoz_spider.py&
+ 1565  cd ..
+ 1566  ls
+ 1567  cd dmozsite/
+ 1568  scrapy crawl dmoz
+ 1569  ls
+ 1570  exit
+ 1571  cd Documents/nitrkl/
+ 1572  ls
+ 1573  cd nitrkl/
+ 1574  ls
+ 1575  gedit spiders/nitrkl_spider.py&
+ 1576  cd ..
+ 1577  ls
+ 1578  cd data1/
+ 1579  ls
+ 1580  scrapy crawl nitrkl_spider 
+ 1581  clear
+ 1582  scrapy crawl nitrkl_spider 
+ 1583  clear
+ 1584  scrapy crawl nitrkl_spider 
+ 1585  ls
+ 1586  cd Documents/
+ 1587  ls
+ 1588  cd nitrkl/
+ 1589  ls
+ 1590  cd nitrkl/
+ 1591  ls
+ 1592  cd spiders/
+ 1593  ls
+ 1594  gedit nitrkl_spider.py&
+ 1595  cd ..
+ 1596  ls
+ 1597  cd ..
+ 1598  ls
+ 1599  cd data1
+ 1600  ls
+ 1601  scrapy show
+ 1602  scrapy crawl nitrk_spider
+ 1603  scrapy
+ 1604  scrapy list
+ 1605  scrapy crawl nitrkl_spider
+ 1606  cd ..
+ 1607  ls
+ 1608  cd nitrkl/
+ 1609  ls
+ 1610  gedit items.py
+ 1611  ls
+ 1612  cd ..
+ 1613  ls
+ 1614  cd data1/
+ 1615  ls
+ 1616  scrapy crawl nitrkl_spider
+ 1617  clear
+ 1618  ls
+ 1619  scrapy crawl nitrkl_spider -o nitrkl_base.csv
+ 1620  rm nitrkl_base.csv 
+ 1621  scrapy crawl nitrkl_spider -o nitrkl_base.csv
+ 1622  cd /usr/local/
+ 1623  ls
+ 1624  cd hadoop
+ 1625  ls
+ 1626  cd bin/
+ 1627  ls
+ 1628  ls -l
+ 1629  cd ..
+ 1630  ls
+ 1631  cd include/
+ 1632  ls
+ 1633  cd .
+ 1634  cd lib
+ 1635  ls -l
+ 1636  cd ..
+ 1637  cd lib
+ 1638  ls
+ 1639  cd native/
+ 1640  ls
+ 1641  cd ..
+ 1642  ls
+ 1643  cd etc/
+ 1644  ls
+ 1645  cd hadoop/
+ 1646  ls
+ 1647  cd ..
+ 1648  ls
+ 1649  cd share/
+ 1650  ls
+ 1651  cd hadoop/
+ 1652  ls
+ 1653  cd mapreduce/
+ 1654  ls
+ 1655  cd $HADOOP_HDFS_HOME
+ 1656  ls
+ 1657  cd share/hadoop/
+ 1658  ls
+ 1659  cd mapreduce/
+ 1660  ls
+ 1661  cd ..
+ 1662  ls
+ 1663  cd yarn/
+ 1664  ls
+ 1665  cd ..
+ 1666  ls
+ 1667  cd hdfs/
+ 1668  ls
+ 1669  cd ..
+ 1670  cd common/
+ 1671  ls
+ 1672  cd ..
+ 1673  ls
+ 1674  cd tools/
+ 1675  ls
+ 1676  cd ..
+ 1677  ls
+ 1678  cd mapreduce/
+ 1679  ls
+ 1680  hadoop streaming hadoop-streaming-2.5.1.jar
+ 1681  cd ..
+ 1682  ls
+ 1683  cd ..
+ 1684  ls
+ 1685  cd hadoop_store/
+ 1686  ls
+ 1687  cd ..
+ 1688  ls
+ 1689  cd hadoop
+ 1690  ls
+ 1691  cat NOTICE.txt 
+ 1692  history
+ 1693  history > /home/history.txt
+ 1694  history > /home/sonuk7/history.txt
+ 1695  gedit /home/sonuk7/history.txt 
+ 1696  cd Documents/
+ 1697  ls
+ 1698  cd nitrkl/
+ 1699  ls
+ 1700  cd data2/
+ 1701  ls
+ 1702  gedit LinkModifier.py
+ 1703  gedit LinkModifier.py&
+ 1704  python LinkModifier.py 
+ 1705  gedit data2_proc.csv 
+ 1706  python LinkModifier.py 
+ 1707  ls
+ 1708  gedit data2_proc.csv&
+ 1709  sort data2_proc.csv | uniq -u | wc -l
+ 1710  sort data2_proc.csv | uniq -u > data2_proc_2.csv
+ 1711  gedit data2_proc_2.csv 
+ 1712  ls
+ 1713  gedit Mapper.py
+ 1714  cd ..
+ 1715  ls
+ 1716  cd data2/
+ 1717  ls
+ 1718  ls -l
+ 1719  cat Mapper.py 
+ 1720  ls
+ 1721  gedit sampletest
+ 1722  python Mapper.py < sampletest | python Reducer.py 
+ 1723  python Mapper.py < sampletest
+ 1724  python Mapper.py < sampletest | python Reducer.py 
+ 1725  start-all.sh 
+ 1726  jps
+ 1727  hadoop fs -ls
+ 1728  hadoop fs -copyFromLocal sampletest .
+ 1729  hadoop fs -ls
+ 1730  hadoop --version
+ 1731  hadoop
+ 1732  hadoop version
+ 1733  ls
+ 1734  pwd
+ 1735  yarn jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.5.1.jar -mapper /home/sonuk7/Documents/nitrkl/nitdata/Mapper.py -reducer /home/sonuk7/Documents/nitrkl/nitdata/Reducer.py -input ./sampletest -output output.txt
+ 1736  ls
+ 1737  chmod +x ./Mapper.py
+ 1738  chmod +x Mapper.py
+ 1739  chmod +x Reducer.py
+ 1740  yarn jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.5.1.jar -mapper /home/sonuk7/Documents/nitrkl/data2/Mapper.py -reducer /home/sonuk7/Documents/nitrkl/data2/Reducer.py -input ./sampletest -output output2.txt
+ 1741  hadoop fs -ls
+ 1742  hadoop fs -cd output.txt
+ 1743  hadoop fs -ls output.txt
+ 1744  hadoop fs -cat output.txt
+ 1745  yarn jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.5.1.jar -mapper /home/sonuk7/Documents/nitrkl/data2/Mapper.py -reducer /home/sonuk7/Documents/nitrkl/data2/Reducer.py -input ./sampletest -output output3.txt
+ 1746  jps
+ 1747  stop-all.sh 
+ 1748  jps
+ 1749  exit
+ 1750  cd Documents/nitrkl/data2/
+ 1751  ls
+ 1752  start-all.sh 
+ 1753  yarn jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.5.1.jar -mapper /home/sonuk7/Documents/nitrkl/data2/Mapper.py -reducer /home/sonuk7/Documents/nitrkl/data2/Reducer.py -input ./sampletest -output output4.txt
+ 1754  jps
+ 1755  exit
+ 1756  cd Documents/
+ 1757  ls
+ 1758  cd nitrkl/
+ 1759  ls
+ 1760  cd data2/
+ 1761  ls
+ 1762  gedit data2_proc_2.csv 
+ 1763  cd ranks/
+ 1764  ls
+ 1765  head part-r-00000
+ 1766  exit
+ 1767  cd Documents/
+ 1768  ls
+ 1769  cd nitrkl/
+ 1770  ls
+ 1771  cd iiitbbsr/
+ 1772  ls
+ 1773  scrapy crawl nitrkl_spider -o iiitdata
+ 1774  scrapy crawl -o iiitdata nitrkl_spider
+ 1775  scrapy crawl -o iiitdata.csv nitrkl_spider
+ 1776  ls
+ 1777  python LinkModifier.py 
+ 1778  ls
+ 1779  sort iiitdata_proc.csv | uniq -u
+ 1780  sort iiitdata_proc.csv | uniq -u > iitdatafinal.csv
+ 1781  wc -l iitdatafinal.csv 
+ 1782  python LinkModifier.py 
+ 1783  s
+ 1784  sort iiitdata_proc.csv | uniq -u > iitdatafinal.csv
+ 1785  wc -l iitdatafinal.csv 
+ 1786  python LinkModifier.py 
+ 1787  sort iiitdata_proc.csv | uniq -u > iitdatafinal.csv
+ 1788  wc -l iitdatafinal.csv 
+ 1789  cd ..
+ 1790  ls
+ 1791  cd..
+ 1792  ls
+ 1793  cd ..
+ 1794  ls
+ 1795  cd PageRank/
+ 1796  ls
+ 1797  python Iterative
+ 1798  python Iterative.py 
+ 1799  gedit Iterative.py&
+ 1800  ls
+ 1801  ls pageinput.txt
+ 1802  cat pageinput.txt
+ 1803  gedit Iterative.py&
+ 1804  python Iterative.py 
+ 1805  cat Iterative.py
+ 1806  cat pageinput.txt
+ 1807  python Iterative.py
+ 1808  ls
+ 1809  cd PR_Python
+ 1810  mkdir PR_Python
+ 1811  cd PR_Python/
+ 1812  ls
+ 1813  gedit Mapper.py
+ 1814  gedti ../pageinput.txt&
+ 1815  gedit ../pageinput.txt&
+ 1816  cat ../pageinput.txt | python Mapper.py 
+ 1817  cat ../pageinput.txt | python Mapper.py | puthon Reducer.py
+ 1818  cat ../pageinput.txt | python Mapper.py | python Reducer.py
+ 1819  cat ../pageinput.txt | python Mapper.py 
+ 1820  cat ../pageinput.txt | python Mapper.py | sort
+ 1821  cat ../pageinput.txt | python Mapper.py | sort | python Reducer.py
+ 1822  python ../Iterative.py 
+ 1823  cd ..
+ 1824  python Iterative.py 
+ 1825  cd PR_Python/
+ 1826  ls
+ 1827  cat ../pageinput.txt | python Mapper.py | sort | python Reducer.py
+ 1828  cd ..
+ 1829  ls
+ 1830  gedit RankReducer.java&
+ 1831  cd PR_Python/
+ 1832  ls
+ 1833  cat ../pageinput.txt | python Mapper.py | sort | python Reducer.py
+ 1834  cd ..
+ 1835  python Iterative.py 
+ 1836  ls
+ 1837  cd Documents/
+ 1838  ls
+ 1839  cd PageRank/
+ 1840  ls
+ 1841  cd PR_Python/
+ 1842  ls
+ 1843  cat ../pageinput.txt | python Mapper.py | sort | python Reducer.py
+ 1844  ls
+ 1845  history > history_dump
